@@ -1,0 +1,5 @@
+[Script]
+modifyResponse = type=http-response, pattern=^https:\/\/example\.com\/api\/.+\/data$, script-path=https://raw.githubusercontent.com/yourusername/yourrepository/yourpath/modify_response.js, requires-body=true, timeout=60
+deleteHeader = type=http-request, pattern=^https:\/\/example\.com\/api\/.+\/data$, script-path=https://raw.githubusercontent.com/yourusername/yourrepository/yourpath/delete_header.js, timeout=60
+[MITM]
+hostname = %APPEND% example.com
